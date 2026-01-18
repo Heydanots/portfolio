@@ -11,7 +11,7 @@ class FooterSection extends StatelessComponent {
         div(classes: 'footer-content', [
           div([
             a(href: 'https://jaspr.site', target: Target.blank, [JasprBadge.light()]),
-            p([.text('© 2026 Developed with ❤️ using Dart & Jaspr.')]),
+            p([.text('© 2026 Développé avec ❤️ via Dart & Jaspr.')]),
           ]),
           div(classes: 'social-links', [
             a(href: '#', [.text('GitHub')]),

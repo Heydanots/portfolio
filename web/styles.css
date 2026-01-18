@@ -95,6 +95,8 @@ header {
     height: 64px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .nav-container {
@@ -322,7 +324,7 @@ section {
 
 .card h3 {
     font-size: 1.25rem;
-    margin-bottom: 12px;
+    margin: 18px 0px;
 }
 
 .tech-tag {

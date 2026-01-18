@@ -9,7 +9,6 @@ class Header extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     return header([
-      div(classes: 'container', [
         div(classes: 'nav-container', [
           a(href: '#home', classes: 'logo', [
             .text('HDS'),
@@ -21,7 +20,7 @@ class Header extends StatelessComponent {
                 a(
                   href: '#projects',
                   attributes: {'onclick': 'closeMenu()'},
-                  [.text('Projects')],
+                  [.text('Projets')],
                 ),
               ]),
               li([
@@ -35,7 +34,7 @@ class Header extends StatelessComponent {
                 a(
                   href: '#tech',
                   attributes: {'onclick': 'closeMenu()'},
-                  [.text('Stack')],
+                  [.text('Technologies')],
                 ),
               ]),
               li([
@@ -53,7 +52,7 @@ class Header extends StatelessComponent {
               id: 'hamburger',
               classes: 'hamburger',
               attributes: {
-                'aria-label': 'Toggle menu',
+                'aria-label': 'Basculer le menu',
                 'onclick': 'toggleMenu()',
               },
               [
@@ -63,7 +62,6 @@ class Header extends StatelessComponent {
               ],
             ),
           ]),
-        ]),
       ]),
     ]);
   }

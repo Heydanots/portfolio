@@ -8,26 +8,26 @@ class ProjectsSection extends StatelessComponent {
   Component build(BuildContext context) {
     return section(id: 'projects', [
       div(classes: 'container', [
-        span(classes: 'section-label', [.text('Selected Work')]),
-        h2(classes: 'section-title', [.text('Projects')]),
+        span(classes: 'section-label', [.text('Sélection de projets')]),
+        h2(classes: 'section-title', [.text('Projets')]),
         div(classes: 'grid', [
           _projectCard(
-            title: 'Finance Dashboard',
+            title: 'Tableau de bord financier',
             stack: ['Flutter', 'Firebase', 'Clean Arch'],
-            goal: 'Real-time asset tracking with complex data visualization.',
+            goal: 'Suivi d’actifs en temps réel avec visualisation de données complexes.',
             status: 'Production',
           ),
           _projectCard(
-            title: 'E-commerce Engine',
+            title: 'Moteur E-commerce',
             stack: ['Dart', 'Jaspr', 'PostgreSQL'],
-            goal: 'High-performance web storefront with SEO optimization.',
-            status: 'In Progress',
+            goal: 'Boutique en ligne haute performance avec optimisation SEO.',
+            status: 'En cours',
           ),
           _projectCard(
             title: 'Health Matrix',
             stack: ['Flutter', 'SQLite', 'Deep Links'],
-            goal: 'Native desktop application for medical data management.',
-            status: 'Beta',
+            goal: 'Application de bureau native pour la gestion de données médicales.',
+            status: 'Bêta',
           ),
         ]),
       ]),

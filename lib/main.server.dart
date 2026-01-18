@@ -25,12 +25,22 @@ void main() {
   // with the provided parameters and components.
   runApp(
     Document(
-      title: 'Flutter Developer | Portfolio',
+      title: 'HDS',
       styles: [
         css.import('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'),
         css.import('styles.css'),
       ],
       head: [
+        meta(
+          name: 'description',
+          content:
+              'Portfolio de HDS, développeur Flutter spécialisé dans la création d’applications mobiles et web performantes avec Clean Architecture.',
+        ),
+        meta(name: 'author', content: 'Daniel OTSHUDIEMA'),
+        meta(
+          name: 'keywords',
+          content: 'Flutter, Dart, Développeur, Portfolio, Mobile, Web, Clean Architecture, Jaspr',
+        ),
         script(src: 'menu.js', attributes: {'defer': ''}),
       ],
       body: App(),

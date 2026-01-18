@@ -8,21 +8,24 @@ class ServicesSection extends StatelessComponent {
   Component build(BuildContext context) {
     return section(id: 'services', classes: 'bg-secondary-layer', [
       div(classes: 'container', [
-        span(classes: 'section-label', [.text('Specialization')]),
+        span(classes: 'section-label', [.text('Spécialisations')]),
         h2(classes: 'section-title', [.text('Services')]),
         div(classes: 'grid', [
           _serviceCard(
-            'Flutter Development',
-            'Building seamless cross-platform applications for iOS, Android, and Desktop.',
+            'Développement Flutter',
+            'Création d’applications multiplateformes fluides pour iOS, Android et Desktop.',
           ),
           _serviceCard(
             'UI/UX Mobile',
-            'User-centric interface design with a focus on performance and fluid interactions.',
+            'Conception d’interfaces centrées sur l’utilisateur avec un focus sur la performance et l’interaction.',
           ),
-          _serviceCard('Code Refactoring', 'Optimizing existing codebases for better maintainability and scalability.'),
           _serviceCard(
-            'Technical Consulting',
-            'Guiding teams through architectural decisions and tech stack selection.',
+            'Refactorisation de Code',
+            'Optimisation des bases de code existantes pour une meilleure maintenabilité et évolutivité.',
+          ),
+          _serviceCard(
+            'Conseil Technique',
+            'Accompagnement des équipes dans les choix d’architecture et de technologies.',
           ),
         ]),
       ]),

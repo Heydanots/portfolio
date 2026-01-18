@@ -9,7 +9,7 @@ class TechStackSection extends StatelessComponent {
     return section(id: 'tech', [
       div(classes: 'container', [
         span(classes: 'section-label', [.text('Expertise')]),
-        h2(classes: 'section-title', [.text('Tech Stack')]),
+        h2(classes: 'section-title', [.text('Technologies')]),
         div(classes: 'tech-grid', [
           _techItem('Flutter', 'flutter'),
           _techItem('Dart', 'dart'),
