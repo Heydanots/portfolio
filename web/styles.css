@@ -99,7 +99,7 @@ header {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     gap: 24px;
@@ -359,8 +359,9 @@ section {
 
 /* Footer */
 footer {
-    padding: 64px 0 40px;
+    padding: 32px 0 40px;
     border-top: 1px solid var(--border);
+    background-color: var(--bg-secondary);
 }
 
 .footer-content {
@@ -383,6 +384,47 @@ footer {
     color: var(--accent);
 }
 
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     section {
@@ -397,7 +439,64 @@ footer {
         font-size: 2rem;
     }
 
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide desktop nav, show mobile nav */
     nav ul {
         display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(var(--bg-primary-rgb), 0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.nav-open ul {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 16px 24px;
+        font-size: 1rem;
+        color: var(--text-primary);
+        transition: all 0.2s;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--bg-secondary);
+        color: var(--accent);
+    }
+
+    .cta-group {
+        flex-direction: column;
+    }
+
+    .contact-box {
+        padding: 40px 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
     }
 }

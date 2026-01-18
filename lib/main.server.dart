@@ -10,7 +10,6 @@ import 'package:jaspr/server.dart';
 
 // Imports the [App] component.
 import 'app.dart';
-
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
 
@@ -30,6 +29,9 @@ void main() {
       styles: [
         css.import('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'),
         css.import('styles.css'),
+      ],
+      head: [
+        script(src: 'menu.js', attributes: {'defer': ''}),
       ],
       body: App(),
     ),

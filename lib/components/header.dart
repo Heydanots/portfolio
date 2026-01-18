@@ -1,5 +1,6 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+
 import 'theme_toggle.dart';
 
 class Header extends StatelessComponent {
@@ -14,23 +15,54 @@ class Header extends StatelessComponent {
             .text('HDS'),
             span(styles: Styles(color: const Color('var(--accent)')), [.text('.')]),
           ]),
-          nav([
+          nav(id: 'main-nav', [
             ul([
               li([
-                a(href: '#projects', [.text('Projects')]),
+                a(
+                  href: '#projects',
+                  attributes: {'onclick': 'closeMenu()'},
+                  [.text('Projects')],
+                ),
               ]),
               li([
-                a(href: '#services', [.text('Services')]),
+                a(
+                  href: '#services',
+                  attributes: {'onclick': 'closeMenu()'},
+                  [.text('Services')],
+                ),
               ]),
               li([
-                a(href: '#tech', [.text('Stack')]),
+                a(
+                  href: '#tech',
+                  attributes: {'onclick': 'closeMenu()'},
+                  [.text('Stack')],
+                ),
               ]),
               li([
-                a(href: '#contact', [.text('Contact')]),
+                a(
+                  href: '#contact',
+                  attributes: {'onclick': 'closeMenu()'},
+                  [.text('Contact')],
+                ),
               ]),
             ]),
           ]),
-          const ThemeToggle(),
+          div(classes: 'header-actions', [
+            const ThemeToggle(),
+            button(
+              id: 'hamburger',
+              classes: 'hamburger',
+              attributes: {
+                'aria-label': 'Toggle menu',
+                'onclick': 'toggleMenu()',
+              },
+              [
+                span([]),
+                span([]),
+                span([]),
+              ],
+            ),
+          ]),
         ]),
       ]),
     ]);

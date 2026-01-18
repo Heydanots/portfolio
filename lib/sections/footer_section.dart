@@ -8,6 +8,7 @@ class FooterSection extends StatelessComponent {
   Component build(BuildContext context) {
     return footer([
       div(classes: 'container', [
+        a(href: 'https://jaspr.site',target: Target.blank, [JasprBadge.light()]),
         div(classes: 'footer-content', [
           p([.text('© 2026 Developed with ❤️ using Dart & Jaspr.')]),
           div(classes: 'social-links', [
