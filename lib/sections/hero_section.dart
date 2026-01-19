@@ -19,8 +19,11 @@ class HeroSection extends StatelessComponent {
           ),
         ]),
         div(classes: 'cta-group', [
-          a(href: 'mailto:contact@example.com', classes: 'btn btn-primary', [.text('Me contacter')]),
-          a(href: '#', classes: 'btn btn-secondary', [.text('Télécharger le CV')]),
+          a(href: 'mailto:danots70@gmail.com', classes: 'btn btn-primary', [.text('Me contacter')]),
+          a(href: 'media/Daniel_OTSHUDIEMA_CV.pdf',
+              classes: 'btn btn-secondary',
+              download: 'CV.pdf',
+              [.text('Télécharger le CV')]),
         ]),
       ]),
     ]);

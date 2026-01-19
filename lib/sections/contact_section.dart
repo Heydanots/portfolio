@@ -17,7 +17,7 @@ class ContactSection extends StatelessComponent {
             ),
           ]),
           div(classes: 'contact-actions', [
-            a(href: 'mailto:contact@example.com', classes: 'btn btn-primary', [.text('Envoyez-moi un e-mail')]),
+            a(href: 'mailto:danots70@gmail.com', classes: 'btn btn-primary', [.text('Envoyez-moi un e-mail')]),
             div(classes: 'social-links-big', [
               a(href: '#', [.text('LinkedIn')]),
               a(href: '#', [.text('GitHub')]),
