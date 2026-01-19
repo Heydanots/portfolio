@@ -287,6 +287,7 @@ section {
     display: grid;
     gap: 32px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
 }
 
 .card {
@@ -297,6 +298,13 @@ section {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.project-card p {
+    flex-grow: 1;
 }
 
 .card:hover {
