@@ -13,11 +13,11 @@ class FooterSection extends StatelessComponent {
             a(href: 'https://jaspr.site', target: Target.blank, [JasprBadge.light()]),
             p([.text('© 2026 Développé avec ❤️ via Dart & Jaspr.')]),
           ]),
-          div(classes: 'social-links', [
-            a(href: '#', [.text('GitHub')]),
-            a(href: '#', [.text('LinkedIn')]),
-            a(href: '#', [.text('Twitter')]),
-          ]),
+          // div(classes: 'social-links', [
+          //   a(href: '#', [.text('GitHub')]),
+          //   a(href: '#', [.text('LinkedIn')]),
+          //   a(href: '#', [.text('Twitter')]),
+          // ]),
         ]),
       ]),
     ]);
