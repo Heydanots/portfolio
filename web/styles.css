@@ -398,27 +398,86 @@ section {
     color: var(--text-secondary);
 }
 
-/* Tech Stack */
-.tech-grid {
+/* Tech Stack (Stripe Style) */
+.tech-header {
+    margin-bottom: 64px;
+}
+
+.tech-header .section-description {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-top: 16px;
+}
+
+.tech-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 24px;
+.tech-category-card {
+    padding: 32px;
+    background: var(--bg-primary);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.tech-item span {
-    font-size: 0.875rem;
-    font-weight: 500;
+.tech-category-card:hover {
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
 }
+
+[data-theme="dark"] .tech-category-card:hover {
+    background: var(--bg-secondary);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+
+.tech-category-card h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.tech-category-card p {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.category-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+    background: var(--bg-primary);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.badge-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
 
 /* Footer */
 footer {
