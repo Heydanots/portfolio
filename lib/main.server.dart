@@ -10,7 +10,6 @@ import 'package:jaspr/server.dart';
 
 // Imports the [App] component.
 import 'app.dart';
-
 // This file is generated automatically by Jaspr, do not remove or edit.
 import 'main.server.options.dart';
 
@@ -24,25 +23,27 @@ void main() {
   //
   // [Document] renders the root document structure (<html>, <head> and <body>)
   // with the provided parameters and components.
-  runApp(Document(
-    title: 'portfolio',
-    styles: [
-      // Special import rule to include to another css file.
-      css.import('https://fonts.googleapis.com/css?family=Roboto'),
-      // Each style rule takes a valid css selector and a set of styles.
-      // Styles are defined using type-safe css bindings and can be freely chained and nested.
-      css('html, body').styles(
-        width: 100.percent,
-        minHeight: 100.vh,
-        padding: .zero,
-        margin: .zero,
-        fontFamily: const .list([FontFamily('Roboto'), FontFamilies.sansSerif]),
-      ),
-      css('h1').styles(
-        margin: .unset,
-        fontSize: 4.rem,
-      ),
-    ],
-    body: App(),
-  ));
+  runApp(
+    Document(
+      title: 'HDS',
+      styles: [
+        css.import('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'),
+        css.import('styles.css'),
+      ],
+      head: [
+        meta(
+          name: 'description',
+          content:
+              'Portfolio de HDS, développeur Flutter spécialisé dans la création d’applications mobiles et web performantes avec Clean Architecture.',
+        ),
+        meta(name: 'author', content: 'Daniel OTSHUDIEMA'),
+        meta(
+          name: 'keywords',
+          content: 'Flutter, Dart, Développeur, Portfolio, Mobile, Web, Clean Architecture, Jaspr',
+        ),
+        script(src: 'menu.js', attributes: {'defer': ''}),
+      ],
+      body: App(),
+    ),
+  );
 }
