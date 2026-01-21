@@ -23,10 +23,10 @@ class ServicesSection extends StatelessComponent {
             'Refactorisation de Code',
             'Optimisation des bases de code existantes pour une meilleure maintenabilité et évolutivité.',
           ),
-          _serviceCard(
-            'Conseil Technique',
-            'Accompagnement des équipes dans les choix d’architecture et de technologies.',
-          ),
+          // _serviceCard(
+          //   'Conseil Technique',
+          //   'Accompagnement des équipes dans les choix d’architecture et de technologies.',
+          // ),
         ]),
       ]),
     ]);
